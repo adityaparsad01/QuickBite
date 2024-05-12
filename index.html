@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker</title>
+    <!-- Chart.js library -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <h1>QuickBite Sell Tracker</h1>
+
+    <!-- Input fields -->
+    <div class="inputs">
+        <label for="date">Date:</label>
+        <input type="date" id="date"><br>
+        <label for="income">Income:</label>
+        <input type="number" id="income"><br>
+        <label for="expenses">Expenses:</label>
+        <input type="number" id="expenses"><br>
+        <button onclick="saveData()">Save</button>
+
+        <!-- Display data -->
+        <div id="expenseData"></div>
+
+        <!-- Download button -->
+        <button onclick="downloadCSV()">Download CSV</button>
+    </div>
+  
+<!-- Monthly stats -->
+<div class="monthly-stats">
+    <h2>Monthly Stats</h2>
+    <p>Total Income: <span id="totalIncome">0</span></p>
+    <p>Total Expenses: <span id="totalExpenses">0</span></p>
+    <p>Average: <span id="average">0</span></p>
+</div>
+    <script src="index.js"></script>
+</body>
+</html>
