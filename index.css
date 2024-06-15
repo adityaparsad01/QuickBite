@@ -83,11 +83,10 @@ button:hover {
 }
 
 .btn-container {
-    background-color: gray;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    overflow: auto; /* Enable scrolling if buttons overflow */
+    /* overflow: auto; Enable scrolling if buttons overflow */
 }
 
 .btn-container button {
