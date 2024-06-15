@@ -87,26 +87,16 @@ button:hover {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    overflow: auto; /* Enable scrolling if buttons overflow */
 }
 
-.inputs label {
-    margin-bottom: 5px;
-}
-
-/* Adjusted input styles */
-.inputs input[type="date"],
-.inputs input[type="number"] {
-    margin-bottom: 10px;
-    width: calc(100% - 22px); /* Adjusted width to account for padding and border */
-}
-
-.inputs button {
+.btn-container button {
     padding: 10px 20px;
     border-radius: 3px;
     transition: background-color 0.3s ease;
 }
 
-.inputs button:hover {
+.btn-container button:hover {
     background-color: #45a049;
 }
 
@@ -162,6 +152,13 @@ button:hover {
     text-align: left;
 }
 
-.btn-container button {
-    margin-right: 5px;
+@media (max-width: 768px) {
+    .btn-container {
+        flex-wrap: wrap; /* Allow buttons to wrap onto new lines */
+    }
+
+    .btn-container button {
+        margin: 5px; /* Add margin to space out buttons */
+        width: auto; /* Allow buttons to size themselves based on content */
+    }
 }
