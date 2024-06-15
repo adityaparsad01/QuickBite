@@ -23,6 +23,7 @@ const calculateMonthlyStats = () => {
     return { totalIncome: 0, totalExpenses: 0, average: 0 };
 };
 
+
 // Function to display monthly stats
 const displayMonthlyStats = () => {
     const { totalIncome, totalExpenses, average } = calculateMonthlyStats();
@@ -45,6 +46,7 @@ const saveData = () => {
 
     const existingData = localStorage.getItem("expenseData");
     const expenseData = existingData ? JSON.parse(existingData) : [];
+    console.log(expenseData)
 
     // Check if an entry for the selected date already exists
     const entryExists = expenseData.some(entry => entry.date === date);

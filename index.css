@@ -54,9 +54,27 @@ tr:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 20px;
+    padding: 10px;
     border-radius: 5px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.entry{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 5px;
+}
+.income-entry{
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+}
+.expense-entry{
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
 }
 
 .inputs label {
