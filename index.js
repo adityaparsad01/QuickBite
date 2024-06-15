@@ -83,7 +83,7 @@ const displayData = () => {
         expenseData.forEach((entry, index) => {
             const difference = entry.income - entry.expenses;
             const differenceClass = difference < 0 ? "negative" : "";
-            tableHtml += `<tbody class="table-group-divider"><tr><td>${entry.date}</td><td>${entry.income}</td><td>${entry.expenses}</td><td class='${differenceClass}'>${difference}</td> <td><div class="btn-container"><button onclick='editEntry(${index})'><i class="fa-regular fa-pen-to-square"></i></button> <button onclick='deleteEntry(${index})'><i class="fa-regular fa-trash-can"></i></button></div></td></tr></tbody>`;
+            tableHtml += `<tbody ><tr><td>${entry.date}</td><td>${entry.income}</td><td>${entry.expenses}</td><td class='${differenceClass}'>${difference}</td> <td><div class="btn-container"><button onclick='editEntry(${index})'><i class="fa-regular fa-pen-to-square"></i></button> <button onclick='deleteEntry(${index})'><i class="fa-regular fa-trash-can"></i></button></div></td></tr></tbody>`;
         });
         tableHtml += "</table></div>";
         document.getElementById("expenseData").innerHTML = tableHtml;        
