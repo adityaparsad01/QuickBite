@@ -83,7 +83,7 @@ const displayData = () => {
         // Sort the data by date in descending order
         expenseData.sort((a, b) => new Date(b.date) - new Date(a.date));
 
-        let tableHtml = `<div class='container table-container'><table class='table table-hover' width='100%' border='1'><thead><tr class="text-center"><th scope="col">Date</th><th scope="col">Income</th><th scope="col">Expenses</th><th scope="col">Difference</th><th scope="col">Action</th></tr></thead><tbody>`;
+        let tableHtml = `<div class='table-container'><table class='table table-hover' width='100%' style='table-layout: fixed;'><thead><tr class="text-center"><th scope="col">Date</th><th scope="col">Income</th><th scope="col">Expenses</th><th scope="col">Difference</th><th scope="col">Action</th></tr></thead><tbody>`;
 
         expenseData.forEach((entry, index) => {
             const difference = entry.income - entry.expenses;

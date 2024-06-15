@@ -14,7 +14,7 @@ button {
     padding: 5px;
     border: 1px solid #ccc;
     border-radius: 3px;
-    width: calc(100% - 18px); /* Adjusted width to account for padding and border */
+    width: calc(100% - 22px); /* Adjusted width to account for padding and border */
     box-sizing: border-box;
 }
 
@@ -28,7 +28,6 @@ button {
 
 button:hover {
     background-color: #45a049;
-
 }
 
 .negative {
@@ -37,14 +36,15 @@ button:hover {
 
 /* Modal-like input container */
 
-.title{
-    padding-top: 10px;
+.title {
+    padding: 10px;
     background-color: #45a049d8;
     color: white;
     display: flex;
     align-items: center;
     justify-content: center;
 }
+
 .inputs {
     display: flex;
     flex-direction: column;
@@ -52,9 +52,10 @@ button:hover {
     padding: 10px;
     border-radius: 5px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
 }
 
-.entry{
+.entry {
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -62,7 +63,7 @@ button:hover {
     margin-bottom: 5px;
 }
 
-.date-entry{
+.date-entry {
     width: 60%;
     display: flex;
     flex-direction: column;
@@ -70,21 +71,18 @@ button:hover {
     align-items: center;
 }
 
-.date-entry label{
+.date-entry label {
     font-weight: bold;
 }
-.income-entry{
-    width: 100%;
-    text-align: center;
-    font-weight: bold;
-}
-.expense-entry{
+
+.income-entry,
+.expense-entry {
     width: 100%;
     text-align: center;
     font-weight: bold;
 }
 
-.btn-container{
+.btn-container {
     background-color: gray;
     display: flex;
     flex-direction: row;
@@ -99,6 +97,7 @@ button:hover {
 .inputs input[type="date"],
 .inputs input[type="number"] {
     margin-bottom: 10px;
+    width: calc(100% - 22px); /* Adjusted width to account for padding and border */
 }
 
 .inputs button {
@@ -146,3 +145,23 @@ button:hover {
     color: #333;
 }
 
+/* Table styles */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table-container {
+    overflow-x: auto;
+    margin-bottom: 20px;
+}
+
+.table th, .table td {
+    border: 1px solid #000;
+    padding: 8px;
+    text-align: left;
+}
+
+.btn-container button {
+    margin-right: 5px;
+}
