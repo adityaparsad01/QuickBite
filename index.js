@@ -84,14 +84,17 @@ const displayData = () => {
         expenseData.sort((a, b) => new Date(b.date) - new Date(a.date));
 
         let tableHtml = `<div class='table-container'><table class='table table-hover' width='100%' border='1'><thead><tr class="text-center"><th scope="col">Date</th><th scope="col">Income</th><th scope="col">Expenses</th><th scope="col">Difference</th><th scope="col">Action</th></tr></thead><tbody>`;
-        
+
         expenseData.forEach((entry, index) => {
             const difference = entry.income - entry.expenses;
             const differenceClass = difference < 0 ? "negative" : "";
 
-            // Format the date to show only the last two digits of the year
+            // Format the date to "dd-mm-yy"
             const date = new Date(entry.date);
-            const formattedDate = `${date.getMonth() + 1}/${date.getDate()}/${date.getFullYear().toString().slice(-2)}`;
+            const day = String(date.getDate()).padStart(2, '0');
+            const month = String(date.getMonth() + 1).padStart(2, '0');
+            const year = date.getFullYear().toString().slice(-2);
+            const formattedDate = `${day}-${month}-${year}`;
 
             tableHtml += `<tr><td>${formattedDate}</td><td>${entry.income}</td><td>${entry.expenses}</td><td class='${differenceClass}'>${difference}</td><td><div class="btn-container"><button onclick='editEntry(${index})'><i class="fa-regular fa-pen-to-square"></i></button> <button onclick='deleteEntry(${index})'><i class="fa-regular fa-trash-can"></i></button></div></td></tr>`;
         });
@@ -103,8 +106,6 @@ const displayData = () => {
     }
     displayMonthlyStats();
 };
-
-
 
 // Function to edit an entry
 const editEntry = (index) => {
