@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,10 +8,16 @@
     <!-- Chart.js library -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link rel="stylesheet" href="index.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
+
 <body>
     <div class="title">
         <h1>QuickBite Sell Tracker</h1>
@@ -38,40 +45,36 @@
 
         <!--testing-->
         <!-- <div class="table-container">
-            <table class='table'>
-                <tr>
-                  <th>Date</th>
-                  <th>Income</th>
-                  <th>Expenses</th>
-                  <th>Difference</th>
-                  <th>Action</th>
+            <table class='table table-hover'><thead><tr class="text-center"><th scope="col">Date</th><th scope="col">Income</th><th scope="col">Expenses</th><th scope="col">Difference</th><th scope="col">Action</th></tr></thead>
+                <tbody class="table-group-divider">
+                <tr class="text-center">
+                    <td>11-6-24</td>
+                    <td>2500</td>
+                    <td>1200</td>
+                    <td class=''>1300</td>
+                    <td>
+                        <div class="btn-container">
+                            <button onclick=''><i class="fa-regular fa-pen-to-square"></i></button>
+                            <button onclick=''><i class="fa-regular fa-trash-can"></i></button>
+                        </div>
+                    </td>
                 </tr>
-                <tr>
-                  <td>11-6-24</td>
-                  <td>2500</td>
-                  <td>1200</td>
-                  <td class=''>1300</td>
-                  <td>
-                    <div class="btn-container">
-                      <button  onclick=''><i class="fa-regular fa-pen-to-square"></i></button>
-                      <button onclick=''><i class="fa-regular fa-trash-can"></i></button>
-                    </div>
-                  </td>
-                </tr>
-              </table>
+            </tbody>
+            </table>
         </div> -->
 
         <!-- Download button -->
         <button onclick="downloadCSV()">Download CSV</button>
     </div>
-  
-<!-- Monthly stats -->
-<div class="monthly-stats">
-    <h2>Monthly Stats</h2>
-    <p>Total Income: <span id="totalIncome">0</span></p>
-    <p>Total Expenses: <span id="totalExpenses">0</span></p>
-    <p>Average: <span id="average">0</span></p>
-</div>
+
+    <!-- Monthly stats -->
+    <div class="monthly-stats">
+        <h2>Monthly Stats</h2>
+        <p>Total Income: <span id="totalIncome">0</span></p>
+        <p>Total Expenses: <span id="totalExpenses">0</span></p>
+        <p>Average: <span id="average">0</span></p>
+    </div>
     <script src="index.js"></script>
 </body>
+
 </html>

@@ -79,11 +79,11 @@ const displayData = () => {
 
     if (existingData) {
         const expenseData = JSON.parse(existingData);
-        let tableHtml = "<div class='table-container'><table class='table' border='1' width='100%'><tr><th>Date</th><th>Income</th><th>Expenses</th><th>Difference</th><th>Action</th></tr>";
+        let tableHtml = `<div class='table-container '><table class='table table-hover'><thead><tr class="text-center"><th scope="col">Date</th><th scope="col">Income</th><th scope="col">Expenses</th><th scope="col">Difference</th><th scope="col">Action</th></tr></thead>`;
         expenseData.forEach((entry, index) => {
             const difference = entry.income - entry.expenses;
             const differenceClass = difference < 0 ? "negative" : "";
-            tableHtml += `<tr><td>${entry.date}</td><td>${entry.income}</td><td>${entry.expenses}</td><td class='${differenceClass}'>${difference}</td> <td><div class="btn-container"><button onclick='editEntry(${index})'><i class="fa-regular fa-pen-to-square"></i></button> <button onclick='deleteEntry(${index})'><i class="fa-regular fa-trash-can"></i></button></div></td></tr>`;
+            tableHtml += `<tbody class="table-group-divider"><tr><td>${entry.date}</td><td>${entry.income}</td><td>${entry.expenses}</td><td class='${differenceClass}'>${difference}</td> <td><div class="btn-container"><button onclick='editEntry(${index})'><i class="fa-regular fa-pen-to-square"></i></button> <button onclick='deleteEntry(${index})'><i class="fa-regular fa-trash-can"></i></button></div></td></tr></tbody>`;
         });
         tableHtml += "</table></div>";
         document.getElementById("expenseData").innerHTML = tableHtml;        
