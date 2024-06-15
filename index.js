@@ -143,7 +143,12 @@ const downloadCSV = () => {
 
     if (existingData) {
         const expenseData = JSON.parse(existingData);
+
+        // Sort the data by date in ascending order
+        expenseData.sort((a, b) => new Date(a.date) - new Date(b.date));
+
         let csvContent = "data:text/csv;charset=utf-8,Date,Total Income,Total Expenses,Difference\n";
+        
         expenseData.forEach(entry => {
             const difference = entry.income - entry.expenses;
             csvContent += `${entry.date},${entry.income},${entry.expenses},${difference}\n`;
@@ -155,10 +160,12 @@ const downloadCSV = () => {
         link.setAttribute("download", "expenseData.csv");
         document.body.appendChild(link);
         link.click();
+        document.body.removeChild(link); // Cleanup: remove the link element after click
     } else {
         alert("No data available to download.");
     }
 };
+
 
 // Display saved data when the page loads
 window.onload = () => {
