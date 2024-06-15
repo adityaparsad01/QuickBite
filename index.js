@@ -79,14 +79,14 @@ const displayData = () => {
 
     if (existingData) {
         const expenseData = JSON.parse(existingData);
-        let tableHtml = "<table class='table' border='1'><tr><th>Date</th><th>Income</th><th>Expenses</th><th>Difference</th><th>Action</th></tr>";
+        let tableHtml = "<div class='table-container'><table class='table' border='1' width='100%'><tr><th>Date</th><th>Income</th><th>Expenses</th><th>Difference</th><th>Action</th></tr>";
         expenseData.forEach((entry, index) => {
             const difference = entry.income - entry.expenses;
             const differenceClass = difference < 0 ? "negative" : "";
-            tableHtml += `<tr><td>${entry.date}</td><td>${entry.income}</td><td>${entry.expenses}</td><td class='${differenceClass}'>${difference}</td><td><div><button onclick='editEntry(${index})'>E</button> <button onclick='deleteEntry(${index})'>D</button></div></td></tr>`;
+            tableHtml += `<tr><td>${entry.date}</td><td>${entry.income}</td><td>${entry.expenses}</td><td class='${differenceClass}'>${difference}</td> <td><div class="btn-container"><button onclick='editEntry(${index})'><i class="fa-regular fa-pen-to-square"></i></button> <button onclick='deleteEntry(${index})'><i class="fa-regular fa-trash-can"></i></button></div></td></tr>`;
         });
-        tableHtml += "</table>";
-        document.getElementById("expenseData").innerHTML = tableHtml;
+        tableHtml += "</table></div>";
+        document.getElementById("expenseData").innerHTML = tableHtml;        
     } else {
         document.getElementById("expenseData").innerHTML = "No data available";
     }

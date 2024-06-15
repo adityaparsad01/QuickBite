@@ -33,6 +33,9 @@ button:hover {
 table {
     width: 100%;
     border-collapse: collapse;
+    border: 1%;
+    display: flex;
+
 }
 
 th, td {
@@ -52,6 +55,9 @@ tr:hover {
 /* Modal-like input container */
 
 .title{
+    padding-top: 10px;
+    background-color: #45a049d8;
+    color: white;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -93,6 +99,14 @@ tr:hover {
     width: 100%;
     text-align: center;
     font-weight: bold;
+}
+
+.btn-container{
+    background-color: gray;
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
 .inputs label {
