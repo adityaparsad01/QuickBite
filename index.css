@@ -143,22 +143,10 @@ button:hover {
 
 .table-container {
     overflow-x: auto;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 .table th, .table td {
-    border: 1px solid #000;
-    padding: 8px;
-    text-align: left;
-}
-
-@media (max-width: 768px) {
-    .btn-container {
-        flex-wrap: wrap; /* Allow buttons to wrap onto new lines */
-    }
-
-    .btn-container button {
-        margin: 5px; /* Add margin to space out buttons */
-        width: auto; /* Allow buttons to size themselves based on content */
-    }
+    padding: 2px;
+    text-align: center;
 }
