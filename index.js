@@ -79,7 +79,7 @@ const displayData = () => {
 
     if (existingData) {
         const expenseData = JSON.parse(existingData);
-        let tableHtml = "<table border='1'><tr><th>Date</th><th>Income</th><th>Expenses</th><th>Difference</th><th>Action</th></tr>";
+        let tableHtml = "<table class='table' border='1'><tr><th>Date</th><th>Income</th><th>Expenses</th><th>Difference</th><th>Action</th></tr>";
         expenseData.forEach((entry, index) => {
             const difference = entry.income - entry.expenses;
             const differenceClass = difference < 0 ? "negative" : "";
